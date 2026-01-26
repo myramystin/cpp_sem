@@ -7,7 +7,9 @@ int main() {
         std::cout << "5!\n";
     }
 
-    int y = 0;
+    int y;
+
+    std::cin >> y;
 
     std::cout << x / y << "\n";
 

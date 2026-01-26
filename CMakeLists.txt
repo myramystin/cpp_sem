@@ -7,6 +7,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 option(ENABLE_UBSAN "Enable UndefinedBehaviorSanitizer" OFF)
+option(ENABLE_MSAN "Enable MemorySanitizer" OFF)
+
 
 # Флаги компиляции
 if(CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
@@ -26,4 +28,6 @@ endif()
 # Подключение поддиректорий
 add_subdirectory(sem_2_code/basic)
 add_subdirectory(sem_2_code/ub)
+add_subdirectory(sem_3_code)
+add_subdirectory(sem_4_code)
 
