@@ -26,8 +26,6 @@ if(ENABLE_UBSAN)
 endif()
 
 # Подключение поддиректорий
-add_subdirectory(sem_2_code/basic)
-add_subdirectory(sem_2_code/ub)
-add_subdirectory(sem_3_code)
-add_subdirectory(sem_4_code)
+
+add_subdirectory(sem_5_code)
 
