@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.15)
 project(Seminar2 VERSION 1.0.0 LANGUAGES CXX)
 
 # Настройки компилятора
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
@@ -27,5 +27,5 @@ endif()
 
 # Подключение поддиректорий
 
-add_subdirectory(sem_5_code)
+add_subdirectory(sem_6_code)
 
