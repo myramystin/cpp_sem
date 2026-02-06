@@ -1,0 +1,1 @@
+add_executable(destructors_and_compile main.cpp)
