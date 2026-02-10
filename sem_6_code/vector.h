@@ -47,6 +47,10 @@ public:
   bool operator==(const Vector &other) const;
   bool operator!=(const Vector &other) const;
 
+
+  Vector& operator[](size_t i);
+  const Vector& operator[](size_t i) const;
+
   // bool operator<(const Vector &other) const;
 
   // bool operator>(const Vector &other) const;
