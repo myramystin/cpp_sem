@@ -24,4 +24,5 @@ public:
   std::string getInfo() override;
 
   void accept(IVehicleVisitor &visitor) override;
+  void do_sth();
 };

@@ -12,4 +12,11 @@ public:
   void start() override;
 
   void dump() const;
+
+  void do_sth();
+
 };
+
+
+// TDumpTruck t;
+// TTruck* tp = &t;

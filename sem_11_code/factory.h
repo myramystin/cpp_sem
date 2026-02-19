@@ -16,6 +16,8 @@ class TVehicleFactory {
 private:
     using TCreatorFunc = std::function<std::shared_ptr<IVehicle>()>;
     
+    // std::function<ReturnType(ArgType1, ArgType2)>;
+
     // Статическая карта создателей
     static std::unordered_map<std::string, TCreatorFunc>& getRegistry() {
         static std::unordered_map<std::string, TCreatorFunc> registry;
