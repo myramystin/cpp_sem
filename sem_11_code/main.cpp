@@ -11,6 +11,7 @@
 
 int main() {
 
+
     // TTruck t("m", 1.0);
     // t.do_sth();
 
@@ -80,41 +81,41 @@ int main() {
         dumptruck->start();
     }
 
-    // TVehicleFactory::registerType("park", [&]()->std::shared_ptr<IVehicle>  {
-    //     auto group = std::make_shared<TVehicleGroup>("dasha's group of cars");
-    //     group->addVehicle(dumptruck);
-    //     return group;
-    // });
+    TVehicleFactory::registerType("park", [&]()->std::shared_ptr<IVehicle>  {
+        auto group = std::make_shared<TVehicleGroup>("dasha's group of cars");
+        group->addVehicle(dumptruck);
+        return group;
+    });
 
-    // auto park = TVehicleFactory::create("park");
-    // if (park) {
-    //     std::cout << park->getInfo() << "\n";
-    //     park->start();
-    // }
+    auto park = TVehicleFactory::create("park");
+    if (park) {
+        std::cout << park->getInfo() << "\n";
+        park->start();
+    }
 
-    // // park->addVehicle(dumptruck);
+    // park->addVehicle(dumptruck);
 
-    // std::cout << std::string(60, '=') << "\n";
+    std::cout << std::string(60, '=') << "\n";
 
-    // auto park2 = std::make_shared<TVehicleGroup>("other cars group");
+    std::shared_ptr<TVehicleGroup> park2 = std::make_shared<TVehicleGroup>("other cars group");
     
-    // park2->addVehicle(std::make_shared<TCar>("Mercedes", 4));
-    // park2->addVehicle(std::make_shared<TCar>("Audi", 5));
-    // park2->addVehicle(std::make_shared<TTruck>("MAN", 18.0));
+    park2->addVehicle(std::make_shared<TCar>("Mercedes", 4));
+    park2->addVehicle(std::make_shared<TCar>("Audi", 5));
+    park2->addVehicle(std::make_shared<TTruck>("MAN", 18.0));
     
-    // std::cout << "\n" << park2->getInfo() << "\n";
+    std::cout << "\n" << park2->getInfo() << "\n";
     
-    // // Работаем с группой как с одним объектом
-    // park2->start();
-    // park2->stop();
+    // Работаем с группой как с одним объектом
+    park2->start();
+    park2->stop();
 
 
-    // std::cout << std::string(60, '=') << "\n";
+    std::cout << std::string(60, '=') << "\n";
 
-    // TInspectionVisitor insp;
-    // park2->accept(insp);
+    TInspectionVisitor insp;
+    park2->accept(insp);
 
-    // insp.printReport();
+    insp.printReport();
 
     return 0;
 }
