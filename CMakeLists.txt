@@ -27,6 +27,6 @@ endif()
 
 # Подключение поддиректорий
 
-add_subdirectory(sem_13)
+add_subdirectory(sem14)
 
 
